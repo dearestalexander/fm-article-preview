@@ -2,14 +2,18 @@
 const shareButtonKLX = document.getElementById('share-btn-klx');
 const shareButtonWR = document.getElementById('share-btn-wr');
 const shareButtonCRF = document.getElementById('share-btn-crf');
+const shareButtonEXC = document.getElementById('share-btn-exc');
 
 const shareMenuKLX = document.getElementById('share-menu-klx');
 const shareMenuWR = document.getElementById('share-menu-wr');
 const shareMenuCRF = document.getElementById('share-menu-crf');
+const shareMenuEXC = document.getElementById('share-menu-exc');
 
 const shareTriangleKLX = document.getElementById('share-triangle-klx');
 const shareTriangleWR = document.getElementById('share-triangle-wr');
 const shareTriangleCRF = document.getElementById('share-triangle-crf');
+const shareTriangleEXC = document.getElementById('share-triangle-exc');
+
 
 
 shareButtonKLX.addEventListener('click', function() {
@@ -39,5 +43,15 @@ shareButtonCRF.addEventListener('click', function() {
     } else {
       shareMenuCRF.classList.add('hidden');
       shareTriangleCRF.classList.add('hidden');
+    }
+});
+
+shareButtonEXC.addEventListener('click', function() {
+    if (shareMenuEXC.classList.contains('hidden')) {
+      shareMenuEXC.classList.remove('hidden');
+      shareTriangleEXC.classList.remove('hidden');
+    } else {
+      shareMenuEXC.classList.add('hidden');
+      shareTriangleEXC.classList.add('hidden');
     }
 });

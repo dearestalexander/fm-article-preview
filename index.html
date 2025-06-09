@@ -6,61 +6,179 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="./styles.css">
-  <script defer src="./script.js"></script>
+  <script defer src="./script-moto.js"></script>
   
   <title>Frontend Mentor | Article preview component</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">  
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
 
 </head>
-<body>
+<body class="moto">
+  <section class="product-grid">
 
-  <article class="component">
-    <div class="component-inner">
-      <div class="component-inner-left">
-        <img class="main-image" src="./images/drawers-wide.jpg" width="350" alt="a cozy scene featuring a green chest of drawers in a home with a vase and picture frames on top">
-      </div>
+    <article class="component moto-card klx-card">
+      <div class="component-inner">
+        <div class="component-inner-left">
+          <img class="main-image" src="./images/moto-klx-crop.jpeg" width="350" alt="a yamaha klx motorbike">
+        </div>
 
-      <div class="component-inner-right">
+        <div class="component-inner-right">
 
-        <h1 class="title">Shift the overall look and feel by adding these wonderful 
-        touches to furniture in your home</h1>
-        <p class="text">Ever been in a room and felt like something was missing? Perhaps 
-        it felt slightly bare and uninviting. I’ve got some simple tips 
-        to help you make any room feel complete.</p>
-         
-        <div class="component-inner-right-btm">
-          <img class="author-img" src="./images/avatar-michelle.jpg"
-            alt="headshot of the author"
-            width="40">
-          <div class="author-text">
-            <p class="author-name">Michelle Appleton</p>
-            <p class="author-date">28 Jun 2020</p>
+          <h1 class="title">KAWSAKI KLX230</h1>
+          <p class="text">Powerful, light, manoeuvrable dual purpose machine: sportier, more agressive styling</p>
+          
+          <div class="component-inner-right-btm">
+            <img class="author-img" src="./images/alex-headshot.jpg"
+              alt="headshot of the author"
+              width="40">
+            <div class="author-text">
+              <p class="author-name">Alexander Roan</p>
+              <p class="author-date">8th June 2025</p>
+            </div>
+            <button id="share-btn-klx" class="share-button" aria-expanded="true/false" aria-controls="share-menu" >
+              <img class="share-icon" src="./images/icon-share.svg" alt="share-button">
+            </button>
           </div>
-          <button id="share-btn" class="share-button" aria-expanded="true/false" aria-controls="share-menu" >
-            <img class="share-icon" src="./images/icon-share.svg" alt="share-button">
-          </button>
+
         </div>
 
       </div>
 
-    </div>
-
-    <div id="share-menu" class="share-menu hidden" aria-label="Share options">
-      <div class="share-links">
-        <p>SHARE</p>
-        <img class="social" src="./images/icon-facebook.svg">
-        <img class="social" src="./images/icon-twitter.svg">
-        <img class="social" src="./images/icon-pinterest.svg">
+      <div id="share-menu-klx" class="share-menu-moto hidden" aria-label="Share options">
+        <div class="share-links">
+          <p>SHARE</p>
+          <img class="social" src="./images/icon-facebook.svg">
+          <img class="social" src="./images/icon-twitter.svg">
+          <img class="social" src="./images/icon-pinterest.svg">
+        </div>
+        <div id="share-triangle-klx" class="share-triangle hidden"></div>
       </div>
-      <div id="share-triangle" class="share-triangle hidden"></div>
-    </div>
 
-  </article>
+    </article>
 
-  
+    <article class="component moto-card wr-card">
+      <div class="component-inner">
+        <div class="component-inner-left">
+          <img class="main-image" src="./images/moto-wr-crop.jpg" width="350" alt="a yamaha wr motorbike">
+        </div>
+
+        <div class="component-inner-right">
+
+          <h1 class="title">YAMAHA WR250</h1>
+          <p class="text">Motocross-bred power and confidence-inspiring handling from a lighter, slimmer new chassis combine to produce Yamaha's fastest, most fun 250 enduro yet!</p>
+          
+          <div class="component-inner-right-btm">
+            <img class="author-img" src="./images/alex-headshot.jpg"
+              alt="headshot of the author"
+              width="40">
+            <div class="author-text">
+              <p class="author-name">Alexander Roan</p>
+              <p class="author-date">8th June 2025</p>
+            </div>
+            <button id="share-btn-wr" class="share-button" aria-expanded="true/false" aria-controls="share-menu" >
+              <img class="share-icon" src="./images/icon-share.svg" alt="share-button">
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div id="share-menu-wr" class="share-menu-moto hidden" aria-label="Share options">
+        <div class="share-links">
+          <p>SHARE</p>
+          <img class="social" src="./images/icon-facebook.svg">
+          <img class="social" src="./images/icon-twitter.svg">
+          <img class="social" src="./images/icon-pinterest.svg">
+        </div>
+        <div id="share-triangle-wr" class="share-triangle hidden"></div>
+      </div>
+
+    </article>
+
+    <article class="component moto-card crf-card">
+      <div class="component-inner">
+        <div class="component-inner-left">
+          <img class="main-image" src="./images/moto-crf-crop.jpg" width="350" alt="a honda crf motorbike">
+        </div>
+
+        <div class="component-inner-right">
+
+          <h1 class="title">HONDA CRF250F</h1>
+          <p class="text">Creating the perfect avenue for you and your family to adventure beyond the screen and experience everything from the back-country to the dunes.</p>
+          
+          <div class="component-inner-right-btm">
+            <img class="author-img" src="./images/alex-headshot.jpg"
+              alt="headshot of the author"
+              width="40">
+            <div class="author-text">
+              <p class="author-name">Alexander Roan</p>
+              <p class="author-date">8th June 2025</p>
+            </div>
+            <button id="share-btn-crf" class="share-button" aria-expanded="true/false" aria-controls="share-menu" >
+              <img class="share-icon" src="./images/icon-share.svg" alt="share-button">
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div id="share-menu-crf" class="share-menu-moto hidden" aria-label="Share options">
+        <div class="share-links">
+          <p>SHARE</p>
+          <img class="social" src="./images/icon-facebook.svg">
+          <img class="social" src="./images/icon-twitter.svg">
+          <img class="social" src="./images/icon-pinterest.svg">
+        </div>
+        <div id="share-triangle-crf" class="share-triangle hidden"></div>
+      </div>
+
+    </article>
+
+        <article class="component moto-card exc-card">
+      <div class="component-inner">
+        <div class="component-inner-left">
+          <img class="main-image" src="./images/moto-ktm.jpg" width="350" alt="a ktm exc motorbike">
+        </div>
+
+        <div class="component-inner-right">
+
+          <h1 class="title">KTM 250 EXC</h1>
+          <p class="text">The 2025 KTM 250 EXC presents enduro riders with the ultimate combination of power and rideability, setting the benchmark in the highly contested E1 class.</p>
+          <div class="component-inner-right-btm">
+            <img class="author-img" src="./images/alex-headshot.jpg"
+              alt="headshot of the author"
+              width="40">
+            <div class="author-text">
+              <p class="author-name">Alexander Roan</p>
+              <p class="author-date">8th June 2025</p>
+            </div>
+            <button id="share-btn-exc" class="share-button" aria-expanded="true/false" aria-controls="share-menu" >
+              <img class="share-icon" src="./images/icon-share.svg" alt="share-button">
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div id="share-menu-exc" class="share-menu-moto hidden" aria-label="Share options">
+        <div class="share-links">
+          <p>SHARE</p>
+          <img class="social" src="./images/icon-facebook.svg">
+          <img class="social" src="./images/icon-twitter.svg">
+          <img class="social" src="./images/icon-pinterest.svg">
+        </div>
+        <div id="share-triangle-exc" class="share-triangle hidden"></div>
+      </div>
+
+    </article>
+
+  </section>
+
   <div class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
       Coded by <a href="https://www.alexroan.com">Alexander Roan</a>.

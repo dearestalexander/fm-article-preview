@@ -44,11 +44,14 @@ article, aside, footer, header, nav, section, main {
 ---------------------*/
 
 :root {
---text-base-font: "Manrope", sans-serif;
---text-base-weight: regular;
---text-base-size: 13px;
---text-base-line-height: 140%;
---text-base-letter-spacing: 0.12%;
+
+/* original design */
+--text-font-base: "Manrope", sans-serif;
+--text-weight-base: regular;
+--text-size-base: 13px;
+--text-lineheight-base: 140%;
+--text-letterspacing-base: 0.12%;
+
 --text-1-size: 20px;
 --text-1-weight: 700;
 --text-1-line-height: 130%;
@@ -62,6 +65,31 @@ article, aside, footer, header, nav, section, main {
 --colour-grey-500: #6E8098;
 --colour-grey-400: #9DAEC2;
 --colour-grey-200: #ECF2F8;
+
+--spacing-200: 1rem; /* 16px */
+--spacing-300: 1.5rem; /* 24px */
+--spacing-400: 2rem; /* 32px */
+--spacing-500: 2.5rem; /* 40px */
+--spacing-600: 3rem; /* 48px */
+--spacing-700: 3.5rem; /* 56px */
+--spacing-800: 4rem; /* 64px */
+--spacing-1300: 6.5rem; /* 104px */
+--spacing-2000: 10rem; /* 160px */
+
+/* enduro motorbikes */
+
+--text-font-enduro: "Bebas Neue", sans-serif;
+--text-size-enduro: 1.5rem;
+
+--color-honda: #cc0000;
+--color-honda-lighter: #f04c4c;
+--color-yamaha:#000099;
+--color-yamaha-ligher:#4c4cd9;
+--color-kawasaki: #1cba17;
+--color-kawasaki-lighter: #24e41e;
+--color-ktm:#FF6600;
+--color-ktm-lighter:#FF9D44;
+
 }
 
 /*------------------
@@ -76,22 +104,23 @@ body {
 }
 
 body, h1, h2 {
-  font-family: var(--text-base-font);
-  font-weight: var(--text-base-weight);
-  font-size: var(--text-base-size);
-  line-height: var(--text-base-line-height);
-  letter-spacing: var(--text-base-letter-spacing);
+  font-family: var(--text-font-base);
+  font-weight: var(--text-weight-base);
+  font-size: var(--text-size-base);
+  line-height: var(--text-lineheight-base);
+  letter-spacing: var(--text-letterspacing-base);
 }
 
 .component {
   position: relative;
-  max-width: 80vw;
+  max-width: 87vw;
   width: 100%;
   margin: 0 auto;
+  margin-top: 4rem;
 }
 
 .component-inner {
-  max-width: 80vw;
+  max-width: 87vw;
   border-radius: 2rem;
   box-shadow: 0px 40px 40px -10px rgba(201, 213, 225, 0.5);
   overflow: hidden;
@@ -108,8 +137,11 @@ body, h1, h2 {
 }
 
 .component-inner-right {
+  display: flex;
+  flex-direction: column;
+  justify-content:space-between;
   position: relative;
-  padding: 2.5rem 2.5rem 1rem 2.5rem;
+  padding: 2rem 1.875rem 1.125rem 1.875rem;
   background-color: white;
 }
 
@@ -124,7 +156,7 @@ body, h1, h2 {
 .text {
   font-weight: var(--text-3-weight);
   color: var(--colour-grey-500);
-  padding: 1.5rem 0 2.5rem 0;
+  padding: 1.5rem 0 3rem 0;
 }
 
 .share-menu, .share-menu-moto {
@@ -218,7 +250,7 @@ body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background-color: rgba(255, 255, 255, 0.6); /* white overlay with opacity */
+  background-color: rgba(255, 255, 255, 0.6);
   z-index: 0;
   pointer-events: none;
 }
@@ -237,19 +269,31 @@ body::before {
   background-position: center;
 }
 
-.klx-card h1 {
-  color: #24e41e;
-  font-style: italic;
+.klx-card h1, .crf-card h1, .wr-card h1, .exc-card h1 {
+  color: white;
+  font-family: var(--text-font-enduro);
+  letter-spacing: 0.05em;
+  transform: skewX(-5deg);
+  font-size: var(--text-size-enduro);
+  padding: 0.25rem 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
-.crf-card h1 {
-  color: #cc0000;
-  font-style: italic;
+.klx-card h1 {
+  background: linear-gradient(to right, var(--color-kawasaki), var(--color-kawasaki-lighter));
 }
 
 .wr-card h1 {
-  color: #000099;
-  font-style: italic;
+  background: linear-gradient(to right, var(--color-yamaha),var(--color-yamaha-ligher));
+}
+
+.crf-card h1 {
+  background: linear-gradient(to right, var(--color-honda), var(--color-honda-lighter));
+}
+
+.exc-card h1 {
+  background: linear-gradient(to right, var(--color-ktm), var(--color-ktm-lighter));
 }
 
 /*-----------------------
@@ -276,6 +320,7 @@ body::before {
   .component-inner-right {
     margin-left: -60px;
     max-width: 56ch;
+    padding: 1.875rem 2.5rem 1.875rem 2.5rem;
   }
 
   .share-menu {
@@ -317,7 +362,7 @@ body::before {
   }
 
   .share-menu-moto {
-    bottom: 8rem;
+    bottom: 6rem;
     left: 27.6rem;
     width: max-content;
     border-radius: 10px;
